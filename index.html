@@ -18,8 +18,9 @@
   }
 
   .background3{
-		background-image: url("img/background.jpg");
-		background-color: #cccccc;
+	background-image: url("img/background.jpg");
+	background-color: #cccccc;
+    margin-top: 375px; 
   }
 
   .text-black{
@@ -29,25 +30,93 @@
   .text-grey{
     color: #d3d3d3;
   }
+
+  .form-check{
+    margin-left: 50px; 
+    background-color: lightgrey;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    font-size: 14px;
+    float: left;
+    width: 250px;
+  }
+
+  .individual-filters{
+    width: 200px;
+    margin-bottom: -10px;
+    background-color: transparent !important;
+  }
+
+  .checkboxes{
+    margin-left: 30px;
+  }
+
+  .card-description{
+    font-size: 12px;
+  }
+
+  .card-title{
+    font-size: 14px;
+  }
+
+  .filters{
+    margin-left: -40px;
+  }
+
+  .filterCategory{
+    margin-top: 10px;
+  }
+
+  .filter-btn{
+    margin-top: 10px;
+  }
+
+  .no-underline:hover{
+    text-decoration: none;
+  }
+
+    @media (max-width: 600px) {
+        .form-check{
+            float: none;
+            width: 300px;
+        }
+        .individual-filters{
+            width: 200px;
+        }
+    } 
 </style>
 
 
 <html lang="en">
 <head>
-  <link rel="icon" href="img/logo-small.png" />
-  <title>Hardware Helper</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-</head>
-<body>
+    <link rel="icon" href="img/logo-small.png" />
+    <title>Hardware Helper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="js/data.js"></script>
 
-  <div class="background1 text-center">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118897235-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118897235-2');
+    </script>
+
+</head>
+
+<body onload="initStore();">
+
+    <div class="background1 text-center">
     <br>
     </br>
     <img class="circle responsive-img" src="img/logo.png">
@@ -55,134 +124,233 @@
     <h5 class="text-white">A TOOL TO HELP WITH THE MATH BEHIND FITTING CABINETS</h5> 
     <br>
     </br>
-  </div>
+    </div>
 
-<br>
-</br>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h4 class="text-center">Enter the number of inches you need to fill:
-      	<a class="text-black" href="img/measure-wall.png" data-toggle="tooltip" target="_blank" data-placement="right" class="tooltip" title="Measure the empty wall you want to add cabinets to!">
-        	<i class="fa fa-question-circle"></i>
-    	</a>
-      </h4>
-	  <div class="input-group mb-3">
-		<input type="text" class="form-control" placeholder="Length in inches" class="inchesToFill" id="inches">
-		<div class="input-group-append">
-			<span class="input-group-text" id="basic-addon2">inches</span>
-		</div>
-	  </div>
-    </div>
-    <div class="col-sm-4">
-      <h4 class="text-center">Enter cabinet sizes, in inches, seperated by commas:</h4>
-      <div class="input-group mb-3">
-		<input type="text" class="form-control" placeholder="Ex: 24,30,36,48,60" class="cabSizes" id="sizes">
-		<div class="input-group-append">
-			<span class="input-group-text" id="basic-addon2">inches</span>
-		</div>
-	  </div>
-    <h6 class="text-center"><button type="button" id="defaults" class="btn btn-outline-primary">Use defaults</button></h6>
-	  <h6 class="text-center"><button type="button" class="btn btn-primary" id="submit">Submit</button></h6>
-    </div>
-    <div class="col-sm-4">
-      <h3 class="text-center">Result</h3> 
-      <div class="container text-center">
-        <h6 class="text-grey">_________________________</h6>
-        <span id="result" class="result"></span>
+    <br>
+    </br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4 class="text-center">Enter the length of the wall you need to fill (in)
+          	<a class="text-black" href="img/measure-wall.png" data-toggle="tooltip" target="_blank" data-placement="right" class="tooltip" title="Measure the empty wall you want to add cabinets to!">
+            	<i class="fa fa-question-circle"></i>
+        	</a>
+          </h4>
+    	  <div class="input-group mb-3">
+    		<input type="text" class="form-control inchesToFill" placeholder="Length in inches" id="inches">
+    		<div class="input-group-append">
+    			<span class="input-group-text" id="basic-addon2">inches</span>
+    		</div>
+    	  </div>
+          <h6 class="text-center"><button type="button" class="btn btn-primary" id="submit">Submit</button></h6>
+        </div>
+        <div class="col-sm-6">
+          <h3 class="text-center">Result</h3> 
+          <div class="container text-center">
+            <h6 class="text-grey">_________________________</h6>
+            <span id="result" class="result"></span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<br>
-</br>
-<br>
-</br>
-<br>
-</br>
+    <br>
+    </br>
+    <br>
+    </br>
+    <br>
+    </br>
 
-<div class="background2 text-center">
-    <br>
-    </br>
-    <br>
-    </br>
-    <br>
-    </br>
-    <h1 class="display-3 text-white">Store</h1>
-    <br>
-    </br>
-    <br>
-    </br>
-    <br>
-    </br>
-</div>
+    <div class="background2 text-center">
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <h1 class="display-3 text-white">Store</h1>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+    </div>
 
-<br>
-</br>
-<div class="container">
-      <h2 class="text-center">Buy Items Here</h2>
-</div>
-<br>
-</br>
+    <br>
+    </br>
+    <div class="form-check filterBoxSize">
+        <h5>Filter By
+            <button class="btn btn-link float-right" id="hideCollapse" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="color brand placement room type height depth doors retailer" style="margin-right: -20px; margin-top: -5px; font-size: 10px; display: none;">Collapse All</button>
+            <button class="btn btn-link float-right" id="hideExpand" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="color brand placement room type height depth doors retailer" style="margin-right: -20px; margin-top: -5px; font-size: 10px;">Expand All</button>
+        </h5>
+        <div class="filterCategory">
+            <h6>Color<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#color" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="color">
+            <span id="color" class="color"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Brand<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#brand" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="brand">
+            <span id="brand" class="brand"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Placement<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#placement" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="placement">
+            <span id="placement" class="placement"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Room<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#room" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="room">
+            <span id="room" class="room"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Type<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#type" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="type">
+                <span id="type" class="type"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Height<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#height" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="height">
+            <span id="height" class="height"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Depth<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#depth" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="depth">
+            <span id="depth" class="depth"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Number of Doors<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#doors" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="doors">
+            <span id="doors" class="doors"></span>
+        </div>
+        <div class="filterCategory">
+            <h6>Retailer<button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#retailer" aria-expanded="false" style="margin-top: -10px;">[+]</button></h6>
+        </div>
+        <div class="filters collapse multi-collapse" id="retailer">
+            <span id="retailer" class="retailer"></span>
+        </div>
+        <button type="submit" class="btn btn-link filter-btn" id="filter">Filter</button>
+    </div>
 
-<div class="background3 text-center">
-    <br>
-    </br>
-    <br>
-    </br>
-    <br>
-    </br>
-    <h1 class="display-3 text-white">Contact Us</h1>
-    <br>
-    </br>
-    <br>
-    </br>
-    <br>
-    </br>
-</div>
+    <div class="container">
+        <span id="store" class="store"></span>
+    </div>
 
+    <footer class="bg-success text-white mt-4">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-md-6 footer_margin">Made by <a class="text-white" href="https://www.huzaifahsimjee.com">Huzaifah Simjee</a></div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
 <script>
+var JSONData;
+var resultList;
+var fullBucketArr;
+var currBucketArr;
+
+var colorsArr;
+var brandsArr;
+var placementsArr;
+var roomtypesArr;
+var typesArr;
+var widthsArr;
+var heightsArr;
+var depthsArr;
+var doorsArr;
+var retailersArr;
+
 $(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 $(document).on('click touchstart', '#submit', function() {
-	setLoader();
+	setResultLoader();
 	setTimeout(onSubmitClick, 100);
+});
+
+$(document).on('click touchstart', '#hideExpand', function() {
+    toggleExpandCollase();
+});
+
+$(document).on('click touchstart', '#hideCollapse', function() {
+    toggleExpandCollase();
 });
 
 $(document).on('click touchstart', '#defaults', function() {
   populateDefaults();
 });
 
-function onSubmitClick(){
-  var result = compute($("#inches").val(), parseCabinetSizes());
-  var resultList = result.set.sort(predicateBy('w'));
+$(document).on('click touchstart', '#filter', function() {
+    setStoreLoader();
+    setTimeout(filterStore, 100);
+});
 
-  console.log(result);
-  var currVal = resultList[0]['w'];
-  var numOfVal = 0;
-  var resultString = "<br/>";
-  var maxVal = 0;
-
-  for (var i = 0; i < resultList.length; i++) {
-    if ( currVal == resultList[i]['w']) {
-      numOfVal++;
+function toggleExpandCollase(){
+    var x = document.getElementById("hideExpand");
+    if (x.style.display == "none") {
+        x.style.display = "block";
     } else {
-      resultString += numOfVal + " x " + currVal + '"<br/>';
-      numOfVal = 1;
-      currVal = resultList[i]['w'];
+        x.style.display = "none";
     }
+    x = document.getElementById("hideCollapse");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    } 
+}
 
-    maxVal += parseInt(currVal, 10);
-  }
-  resultString += numOfVal + " x " + currVal + '"<br/>';
+function onSubmitClick(){
+    if($("#inches").val() < getMinWidth(JSONData)){
+        setResult("Error!<br>You did not enter a valid input");
+    }
+    else{
+        var result;
+        populateWidthsArr(JSONData);
+        if($("#inches").val() > 22500){
+            result = compute(22500, widthsArr);
+        }
+        else{
+            result = compute($("#inches").val(), widthsArr);
+        }
+        resultList = result.set.sort(predicateBy('w'));
 
-  setResult("Max size you can fill: " + maxVal + '"<br/>Use the following combination' + resultString);
+      console.log(result);
+      var currVal = resultList[0]['w'];
+      var numOfVal = 0;
+      var resultString = "<br/>";
+      var maxVal = 0;
+
+      for (var i = 0; i < resultList.length; i++) {
+        if ( currVal == resultList[i]['w']) {
+          numOfVal++;
+        } else {
+          resultString += numOfVal + " x " + currVal + '"<br/>';
+          numOfVal = 1;
+          currVal = resultList[i]['w'];
+        }
+
+        maxVal += parseInt(currVal, 10);
+      }
+      resultString += numOfVal + " x " + currVal + '"<br/>';
+
+      setResult("Max size you can fill: " + maxVal + '"<br/>Use the following combination' + resultString);
+
+      setStore();
+    }
 }
 
 function compute(target, sizes) {
@@ -192,31 +360,26 @@ function compute(target, sizes) {
       sizesMap.push({w:sizes[j], b:sizes[j]});
     }
   }
-
+/*_________________________________________________________*/
   return knapsack(sizesMap, target);
 }
 
 function setResult(result) {
-  $("#result").html(result);
+    $("#result").html(result);
 }
 
-function setLoader(){
+function setResultLoader(){
 	var output = '<br></br><i class="fas fa-sync fa-spin fa-3x"></i>'; 
 	$("#result").html(output);
 }
 
-function parseCabinetSizes() {
-  var sizesText = $("#sizes").val();
-  var sizesList = sizesText.split(",");
-  for (var i = 0; i < sizesList.length; i++) {
-    sizesList[i] = parseInt(sizesList[i], 10);
-  }
-
-  return sizesList;
+function setStoreLoader(){
+    var output = '<div class="text-center"><br></br><i class="fas fa-sync fa-spin fa-3x"></i></div>'; 
+    $("#store").html(output);
 }
 
 function populateDefaults() {
-  $("#sizes").val("24,30,36,48,60");
+    $("#sizes").val("24,30,36,48,60");
 }
 
 //Knapsack algorithm
@@ -301,5 +464,682 @@ function predicateBy(prop){
       }
       return 0;
    }
+}
+
+function initStore(callback) {
+    JSONData = getWebsite();
+    initBuckets();
+    initFilters(JSONData);
+    clearFilters();
+    makeStore(fullBucketArr);
+}
+
+function setStore(){
+    clearFilters();
+
+    var resultBucketArr = new Array();
+
+    for(var i = 0; i < fullBucketArr.length; i++){
+         var tempArr2 = new Array();
+         var tempArr = fullBucketArr[i];
+        for(var j = 0; j < tempArr.length; j++){
+            for (var k = 0; k < resultList.length; k++) {
+                var numVal = resultList[k]['w'];
+                numVal = parseInt(numVal, 10);
+
+                if(tempArr[j].width == numVal){
+                    tempArr2[tempArr2.length] = tempArr[j];
+                }
+            }
+        }
+        if(tempArr2.length == resultList.length){
+            resultBucketArr[resultBucketArr.length] = tempArr2;
+        }
+    }
+
+    currBucketArr = resultBucketArr;
+
+    makeStore(resultBucketArr);
+}
+
+function makeStore(bucketArr) {  
+    var output = '<div class="text-center"><br></br><i class="fas fa-sync fa-spin fa-3x"></i></div>'; 
+    $("#store").html(output);
+
+    var temp = "";
+
+    for(var j = 0; j < bucketArr.length; j++){
+        var tempArr = bucketArr[j];
+        var tempString = "";
+        var price = 0;
+
+        for(var i = 0; i < tempArr.length; i++){
+            tempString += "<a class='no-underline' href=" + tempArr[i].link + " target='_blank'><div class='col-lg-3 col-md-8 mb-auto p-3'><div class='container'><div class='card mx-auto h-100' style='width:250px;'><div class='card-body'><img src=" + 
+            tempArr[i].img + " style='width:100%'><hr><p class='card-title text-black'>" + tempArr[i].name + "</p><p class='card-description text-black'>" + "Dimensions: " + 
+            tempArr[i].depth + "\"x" + tempArr[i].width + "\"x" + tempArr[i].height + "</p><p class='card-description text-danger'>$" + tempArr[i].price + "</p></div></div></div></div></a>";
+            price += tempArr[i].price;
+        }
+
+        if(j % 2 == 0){
+            temp += "<h5 class='text-center'><br>" + tempArr[0].brand + ' | ' + tempArr[0].color + ' | ' + tempArr[0].roomtype + " | Depth: " + tempArr[0].depth + "\" | Height: " + 
+            tempArr[0].height + "\" | " +tempArr[0].placement + ' | ' + tempArr[0].type + ' | ' + tempArr[0].retailer + " | Total: $" + price + "</h5>"
+
+            temp += "<div class='card-group justify-content-center' style='padding-right: 50px;'>";
+        }
+        else{
+            temp += "<h5 class='text-center'><br>" + tempArr[0].brand + ' | ' + tempArr[0].color + ' | ' + tempArr[0].roomtype + " | Depth: " + tempArr[0].depth + "\" | Height: " + 
+            tempArr[0].height + "\" | " +tempArr[0].placement + ' | ' + tempArr[0].type + ' | ' + tempArr[0].retailer + " | Total: $" + price + "</h5>"
+            temp += "<div class='card-group justify-content-center' style='background-color:lightgrey; padding-right: 50px;'>";
+        }
+        temp += tempString;
+        temp += "</div>";
+    }
+
+    $("#store").html(temp);
+}
+
+function initBuckets(){
+    var objArray = JSONData;
+    var done = 0;
+    var tempArr = new Array();
+    fullBucketArr = new Array();
+
+    for(var i = 0; i < objArray.length; i++){
+        for(var j = 0; j < fullBucketArr.length; j++){
+            tempArr = fullBucketArr[j];
+            if(tempArr[0].color == objArray[i].color && tempArr[0].brand == objArray[i].brand && tempArr[0].placement == objArray[i].placement && tempArr[0].roomtype == objArray[i].roomtype && 
+            tempArr[0].type == objArray[i].type && tempArr[0].height == objArray[i].height && tempArr[0].depth == objArray[i].depth && tempArr[0].doors == objArray[i].doors && 
+            tempArr[0].retailer == objArray[i].retailer){
+                tempArr[tempArr.length] = objArray[i];
+                fullBucketArr[j] = tempArr;
+                done = 1;
+            }
+        }
+        if(done == 0){
+            tempArr = new Array();
+            tempArr[0] = objArray[i];
+            fullBucketArr[fullBucketArr.length] = tempArr;
+        }
+        done = 0;
+    }
+
+    currBucketArr = fullBucketArr;
+}
+
+function filterStore(){
+    makeStore(filter());
+}
+
+function filter(){
+    var tempArr = new Array();
+    var finalArr = new Array();
+
+    var colorFilters = new Array();
+    var brandFilters = new Array();
+    var placementFilters = new Array();
+    var roomFilters = new Array();
+    var typeFilters = new Array();
+    var heightFilters = new Array();
+    var depthFilters = new Array();
+    var doorFilters = new Array();
+    var retailerFilters = new Array();
+
+    for(var v = 0; v < colorsArr.length; v++){
+        var checkBox = document.getElementById(colorsArr[v]);
+        if (checkBox.checked == true){
+            colorFilters[colorFilters.length] = colorsArr[v];
+        }
+    }
+    if(colorFilters.length == 0){
+        colorFilters = colorsArr;
+    }
+
+    for(var v = 0; v < brandsArr.length; v++){
+        var checkBox = document.getElementById(brandsArr[v]);
+        if (checkBox.checked == true){
+            brandFilters[brandFilters.length] = brandsArr[v];
+        }
+    }
+    if(brandFilters.length == 0){
+        brandFilters = brandsArr;
+    }
+
+    for(var v = 0; v < placementsArr.length; v++){
+        var checkBox = document.getElementById(placementsArr[v]);
+        if (checkBox.checked == true){
+            placementFilters[placementFilters.length] = placementsArr[v];
+        }
+    }
+    if(placementFilters.length == 0){
+        placementFilters = placementsArr;
+    }
+
+    for(var v = 0; v < roomtypesArr.length; v++){
+        var checkBox = document.getElementById(roomtypesArr[v]);
+        if (checkBox.checked == true){
+            roomFilters[roomFilters.length] = roomtypesArr[v];
+        }
+    }
+    if(roomFilters.length == 0){
+        roomFilters = roomtypesArr;
+    }
+
+    for(var v = 0; v < typesArr.length; v++){
+        var checkBox = document.getElementById(typesArr[v]);
+        if (checkBox.checked == true){
+            typeFilters[typeFilters.length] = typesArr[v];
+        }
+    }
+    if(typeFilters.length == 0){
+        typeFilters = typesArr;
+    }
+
+    for(var v = 0; v < heightsArr.length; v++){
+        var checkBox = document.getElementById(heightsArr[v]);
+        if (checkBox.checked == true){
+            heightFilters[heightFilters.length] = heightsArr[v];
+        }
+    }
+    if(heightFilters.length == 0){
+        heightFilters = heightsArr;
+    }
+
+    for(var v = 0; v < depthsArr.length; v++){
+        var checkBox = document.getElementById(depthsArr[v]);
+        if (checkBox.checked == true){
+            depthFilters[depthFilters.length] = depthsArr[v];
+        }
+    }
+    if(depthFilters.length == 0){
+        depthFilters = depthsArr;
+    }
+
+    for(var v = 0; v < doorsArr.length; v++){
+        var checkBox = document.getElementById(doorsArr[v]);
+        if (checkBox.checked == true){
+            doorFilters[doorFilters.length] = doorsArr[v];
+        }
+    }
+    if(doorFilters.length == 0){
+        doorFilters = doorsArr;
+    }
+
+    for(var v = 0; v < retailersArr.length; v++){
+        var checkBox = document.getElementById(retailersArr[v]);
+        if (checkBox.checked == true){
+            retailerFilters[retailerFilters.length] = retailersArr[v];
+        }
+    }
+    if(retailerFilters.length == 0){
+        retailerFilters = retailersArr;
+    }
+
+    finalArr = new Array();
+    tempArr = new Array();
+    tempArr2 = new Array();
+
+    for(var j = 0; j < currBucketArr.length; j++){
+        for(var i = 0; i < colorFilters.length; i++){
+            tempArr = currBucketArr[j];
+            if(tempArr[0].color == colorFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < brandFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].brand == brandFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < placementFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].placement == placementFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < roomFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].roomtype == roomFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < typeFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].type == typeFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < heightFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].height == heightFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < depthFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].depth == depthFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < doorFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].doors == doorFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    tempArr2 = finalArr;
+    finalArr = new Array();
+
+    for(var j = 0; j < tempArr2.length; j++){
+        for(var i = 0; i < retailerFilters.length; i++){
+            tempArr = tempArr2[j];
+            if(tempArr[0].retailer == retailerFilters[i]){
+                finalArr[finalArr.length] = tempArr;
+            }
+
+        }
+    }
+
+    return finalArr;
+}
+
+function clearFilters(){
+    for(var v = 0; v < colorsArr.length; v++){
+        var checkBox = document.getElementById(colorsArr[v]);
+        checkBox.checked = false;
+    }
+
+    for(var v = 0; v < brandsArr.length; v++){
+        var checkBox = document.getElementById(brandsArr[v]);
+        checkBox.checked = false;
+    }
+
+    for(var v = 0; v < placementsArr.length; v++){
+        var checkBox = document.getElementById(placementsArr[v]);
+        checkBox.checked = false;
+    }
+
+    for(var v = 0; v < roomtypesArr.length; v++){
+        var checkBox = document.getElementById(roomtypesArr[v]);
+        checkBox.checked = false;
+    }
+
+    for(var v = 0; v < typesArr.length; v++){
+        var checkBox = document.getElementById(typesArr[v]);
+        checkBox.checked = false;
+    }
+
+    var tempCheckBox = document.getElementById("50-100");
+    checkBox.checked = false;
+    tempCheckBox = document.getElementById("100-150");
+    checkBox.checked = false;
+    tempCheckBox = document.getElementById("150-200");
+    checkBox.checked = false;
+
+    for(var v = 0; v < heightsArr.length; v++){
+        var checkBox = document.getElementById(heightsArr[v]);
+        checkBox.checked = false;
+    }
+
+    for(var v = 0; v < depthsArr.length; v++){
+        var checkBox = document.getElementById(depthsArr[v]);
+        checkBox.checked = false;
+    }
+
+    for(var v = 0; v < doorsArr.length; v++){
+        var checkBox = document.getElementById(doorsArr[v]);
+        checkBox.checked = false;
+    }
+
+    for(var v = 0; v < retailersArr.length; v++){
+        var checkBox = document.getElementById(retailersArr[v]);
+        checkBox.checked = false;
+    }
+}
+
+function initFilters(objArray){
+  initFilterColors(objArray);
+  initFilterBrands(objArray);
+  initFilterPlacements(objArray);
+  initFilterRooms(objArray);
+  initFilterTypes(objArray);
+  initFilterHeights(objArray);
+  initFilterDepths(objArray);
+  initFilterDoors(objArray);
+  initFilterRetailers(objArray);
+}
+
+function initFilterColors(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].color == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].color;
+      }
+      bool = 0;
+    }
+  }
+
+  colorsArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#color").html(filterHTML);
+}
+
+function initFilterBrands(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].brand == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].brand;
+      }
+      bool = 0;
+    }
+  }
+
+  brandsArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#brand").html(filterHTML);
+}
+
+function initFilterPlacements(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].placement == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].placement;
+      }
+      bool = 0;
+    }
+  }
+
+  placementsArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#placement").html(filterHTML);
+}
+
+function initFilterRooms(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].roomtype == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].roomtype;
+      }
+      bool = 0;
+    }
+  }
+
+  roomtypesArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#room").html(filterHTML);
+}
+
+function initFilterTypes(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].type == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].type;
+      }
+      bool = 0;
+    }
+  }
+
+  typesArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#type").html(filterHTML);
+}
+
+function initFilterHeights(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].height == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].height;
+      }
+      bool = 0;
+    }
+  }
+
+   heightsArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#height").html(filterHTML);
+}
+
+function initFilterDepths(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].depth == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].depth;
+      }
+      bool = 0;
+    }
+  }
+
+  depthsArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#depth").html(filterHTML);
+}
+
+function initFilterDoors(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].doors == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].doors;
+      }
+      bool = 0;
+    }
+  }
+
+  doorsArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div>";
+  }
+  $("#doors").html(filterHTML);
+}
+
+function initFilterRetailers(objArray){
+  var filterNum = 0;
+  var bool = 0;
+  var filterArr = new Array();
+  var filterHTML = "";
+  for(var i = 0; i < objArray.length; i++){
+    if(filterArr.lenght != 0){
+      for (var j = 0; j < filterArr.length; j++){
+        if(objArray[i].retailer == filterArr[j]){
+          bool = 1;
+        }
+      }
+      if(bool == 0){
+        filterArr[filterArr.length] = objArray[i].retailer;
+      }
+      bool = 0;
+    }
+  }
+
+  retailersArr = filterArr;
+
+  for(var k = 0; k < filterArr.length; k++){
+    filterHTML += "<div class='form-check individual-filters'><label class='form-check-label'>";
+    filterHTML += "<input type='checkbox' class='form-check-input' id='" + filterArr[k] + "'>" + filterArr[k] + "</label></div></div>";
+  }
+  $("#retailer").html(filterHTML);
+}
+
+function getMinWidth(objArray){
+    var minWidth = objArray[0].width;
+   
+    for(var i = 0; i < objArray.length; i++){
+        if(objArray[i].width < minWidth){
+            minWidth = objArray[i].width;
+        }
+    }
+    return minWidth;
+}
+
+function populateWidthsArr(objArray){
+    widthsArr = new Array();
+    var temp = 0;
+
+    widthsArr[0] = objArray[0].width;
+
+    for(var i = 1; i < objArray.length; i++){
+        for(var j = 0; j < widthsArr.length; j++){
+            if(widthsArr[j] == objArray[i].width){
+                temp = 1;
+            }
+        }
+        if(temp == 0){
+            widthsArr[widthsArr.length] = objArray[i].width;
+        }
+        temp = 0;
+    }
 }
 </script>
